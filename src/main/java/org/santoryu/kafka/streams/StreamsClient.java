@@ -10,10 +10,8 @@ public class StreamsClient {
     public static void main(String[] args) {
         // create Configuration
         Properties props = StreamConfiguration.getConfiguration();
-
         // build Topology
         Topology topology = YFinanceTopology.buildTopology();
-
         // create Kafka Streams
         KafkaStreams kafkaStreams = new KafkaStreams(topology, props);
         Runtime.getRuntime().addShutdownHook(new Thread(kafkaStreams::close));

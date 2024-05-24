@@ -107,8 +107,8 @@ public class ConsumerClient<K extends Serializable, V extends Serializable> {
 
 
     public static void main(String[] args) {
-//        List<String> topicList = List.of("postgres.public.movies");
-        List<String> topicList = List.of("test-target-topic");
+        List<String> topicList = List.of("postgres.public.yfinance");
+//        List<String> topicList = List.of("test-target-topic");
         String hostName = "localhost:9092";
         String groupId = "test-group";
 
